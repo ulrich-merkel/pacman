@@ -15,10 +15,6 @@ Thumbs.db
 
 _bkp
 node_modules
-docs
-doc
 */.sass-cache/*
 .sass-cache
-src/assists/jsdoc/
-src/assists/jsdoc-toolkit/
-todo.txt
+
