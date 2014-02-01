@@ -1157,15 +1157,15 @@ body, html {
   color: #ff0;
   display: block;
   margin: 0 auto 40px;
-  -webkit-animation: color 6s infinite;
+  -webkit-animation: color 8s infinite;
   /* Safari 4+ */
-  -moz-animation: color 6s infinite;
+  -moz-animation: color 8s infinite;
   /* Fx 5+ */
-  -ms-animation: color 6s infinite;
+  -ms-animation: color 8s infinite;
   /* Ie 10+ */
-  -o-animation: color 6s infinite;
+  -o-animation: color 8s infinite;
   /* Opera 12+ */
-  animation: color 6s infinite;
+  animation: color 8s infinite;
   /* IE 10+ */
 }
 /* line 106, ../sass/_app/layouts/_standard.css.scss */
