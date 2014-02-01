@@ -1,0 +1,33 @@
+/* -------------------------------------------------- 
+	:: Links
+---------------------------------------------------*/
+
+    a {
+        color: $link-color;
+        text-decoration: none;
+
+		-webkit-transition: background 0.5s ease-in-out, color 0.3s ease-in-out;
+		-moz-transition: background 0.5s ease-in-out, color 0.3s ease-in-out;
+		-o-transition: background 0.5s ease-in-out, color 0.3s ease-in-out;
+		-ms-transition: background 0.5s ease-in-out, color 0.3s ease-in-out;
+		transition: background 0.5s ease-in-out, color 0.3s ease-in-out;
+		
+    }
+
+	.desktop a:hover {
+		color: $link-color-hover;
+	}
+
+	a:active {
+        color: $link-color-active;
+    }
+
+    a:focus {
+		color: $link-color-focus;
+        outline: thin dotted;
+    }
+
+    a:active,
+    a:hover {
+        outline: 0;
+    }

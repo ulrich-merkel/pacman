@@ -1,0 +1,58 @@
+{
+    "name": "Pacman",
+    "description": "JavaScript pacman game app",
+    "version": "0.1.1",
+    "homepage": "https://github.com/ulrich-merkel/pacman",
+    "author": {
+        "name": "Ulrich Merkel",
+        "url": "http://www.ulrichmerkel.com"
+    },
+    "contributors": [
+        
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ulrich-merkel/pacman.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ulrich-merkel/pacman/issues"
+    },
+    "engines": {
+        "node": ">=0.8"
+    },
+
+    "devDependencies": {
+
+        "grunt": "~0.4.0",
+
+        "grunt-contrib-compass": "*",
+        "grunt-contrib-concat": "*",
+        "grunt-contrib-copy": "*",
+        "grunt-contrib-cssmin": "*",
+        "grunt-contrib-sass": "*",
+        "grunt-contrib-uglify": "*",
+        "grunt-contrib-watch": "*",
+
+        "grunt-cssc": "*",
+        "grunt-imageoptim": "*",
+        "grunt-jsdoc-plugin": "*",
+        "grunt-htmlhint": "*",
+
+        "matchdep": "*"
+
+    },
+
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/ulrich-merkel/pacman/LICENSE"
+        }
+    ],
+
+    "keywords": [
+        "javascript",
+        "pacman",
+        "web app",
+        "game"
+    ]
+}

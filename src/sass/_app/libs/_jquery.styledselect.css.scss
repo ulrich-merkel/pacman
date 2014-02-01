@@ -1,0 +1,97 @@
+/* -------------------------------------------------- 
+	::  Custom Forms Select Replacement
+---------------------------------------------------*/
+
+	.styled-select-wrapper {
+		position: relative;
+		color: #999; cursor:
+		pointer;
+		font-family: Arial;
+		width: 50px;
+	}
+
+	/* hide original select as much as possible */
+	.styled-select-wrapper select {
+		width: 1px !important;
+		height: 1px !important;
+		border: none !important;
+		padding: 0 !important;
+		margin: 0 !important;
+		float: left;
+		background: transparent;
+		-webkit-appearance: none;
+	}
+	.styled-select-wrapper select:focus {
+		outline: none;
+	}
+	.lt-ie9 .styled-select-wrapper select {
+		display: none;
+	}
+
+	/* replacement header */
+	.styled-select-header {
+		position: relative;
+		width: 100%;
+		background: #f1f1f1;
+		border-bottom: 1px solid #ccc;
+
+		.styled-select-header-entry {
+			display: block;
+			padding: 6px 0 6px 10px;
+			color: #999;
+		}
+		.styled-select-header-icon {
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: block;
+			width: 25px;
+			height: 26px;
+			border-right: 1px solid #ccc;
+		}
+
+		.styled-select-header-icon:after {
+			content: "";
+			width: 0;
+			height: 0;
+			border-left: 4px solid transparent;
+			border-right: 4px solid transparent;
+			border-top: 4px solid #b4b4b4;
+			display: block;
+			position: absolute;
+			right: 8px;
+			bottom: 11px;
+		}
+		&.open .styled-select-header-icon:after {
+			border-bottom: 4px solid #b4b4b4;
+			border-top: none;
+		}
+	}
+
+	/* replacement content */
+	.styled-select-content {
+		position: absolute;
+		z-index: 1000;
+		padding: 0;
+		top: 30px;
+		left: 0px;
+		max-height: 300px;
+		overflow-y: auto;
+		border-top: 1px solid #bbb;
+		border-right: 1px solid #bbb;
+		border-left: 1px solid #bbb;
+
+		.styled-select-entry {
+			display: block;
+			float: none;
+			padding: 5px 10px;
+			background: $color-white;
+			border-bottom: 1px solid #bbb;
+			opacity: 0.95;
+		}
+		.styled-select-entry.selected {
+			color: $color-red;
+		}
+
+	}
+	

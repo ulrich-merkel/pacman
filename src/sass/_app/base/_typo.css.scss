@@ -1,0 +1,183 @@
+/* -------------------------------------------------- 
+	:: FONTS
+---------------------------------------------------*/
+
+	/**
+	 * font-face declarations
+	 */
+	@font-face {
+		font-family: 'pleasantly_plumpnormal';
+		src: url('../assets/fonts/PLUMP-webfont.eot');
+		src: url('../assets/fonts/PLUMP-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('../assets/fonts/PLUMP-webfont.woff') format('woff'),
+			 url('../assets/fonts/PLUMP-webfont.ttf') format('truetype'),
+			 url('../assets/fonts/PLUMP-webfont.svg#pleasantly_plumpnormal') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: 'icomoon';
+		src:url('../assets/fonts/icomoon.eot');
+		src:url('../assets/fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+			url('../assets/fonts/icomoon.ttf') format('truetype'),
+			url('../assets/fonts/icomoon.woff') format('woff'),
+			url('../assets/fonts/icomoon.svg#icomoon') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	/**
+	 * basic typo
+	 */
+	body, select, textarea, input {
+		@include font-size(18);
+		@include font-family-standard;
+
+		color: $font-color;
+		letter-spacing: -0.02em;
+		line-height: 1.4;
+		vertical-align: baseline;
+
+		// mobile fontsize adjustments
+		-webkit-text-size-adjust: 100%;
+		-moz-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
+		text-size-adjust: 100%;
+
+		// improve antialias
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+
+		@media only screen and (max-width: $breakpoint-mobile) {
+			@include font-size(18);
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		@include font-family-headline;
+		font-weight: 400;
+		color: $font-color-headline;
+		text-align: center;
+		line-height: 1.05;
+		em, span {
+			display: block;
+			font-style: normal;
+		}
+	}
+
+	h1 {
+		margin: 40px auto;
+		@include font-size(60);
+		@media only screen and (max-width: $breakpoint-mobile) {
+			@include font-size(40);
+		}
+	}
+	h2, h3, h4, h5, h6 {
+		margin: 0 0 20px;
+		@include font-size(30);
+		@media only screen and (max-width: $breakpoint-mobile) {
+			@include font-size(20);
+		}
+	}
+
+	p {
+		margin: 0;
+
+		&.lead {
+			@include font-size(22);
+			line-height: 1.22;
+		}
+
+	}
+
+	b, strong {
+        font-weight: 700;
+    }
+
+	em {
+		@include font-family-standard;
+		font-style: italic;
+		text-transform: none;
+	}
+
+	small {
+        font-size: 80%;
+    }
+	
+	address {
+		font-style: normal;
+	}
+	
+	code {
+		font-family: Consolas, "Liberation Mono", Courier, monospace;
+		font-weight: 700;
+		color: #bb260d;
+	}
+
+	
+	/* Abbreviations */
+	abbr,
+	acronym {
+	  text-transform: uppercase;
+	  font-size: 90%;
+	  color: #222;
+	  border-bottom: 1px dotted #dddddd;
+	  cursor: help;
+	}
+	
+	abbr {
+	  text-transform: none;
+	}
+
+	/* Blockquotes */
+	blockquote {
+	  margin: 0 0 1.25rem;
+	  padding: 0.5625rem 1.25rem 0 1.1875rem;
+	  border-left: 1px solid #ddd;
+	}
+	blockquote cite {
+		display: block;
+		font-size: 0.8125rem;
+		color: #555;
+	}
+	blockquote cite:before {
+		content: "\2014 \0020";
+	}
+	blockquote cite a,
+	blockquote cite a:visited {
+		color: #555;
+	}
+
+	blockquote,
+	blockquote p {
+		line-height: 1.6;
+		color: #6f6f6f;
+	}
+
+	/* Microformats */
+	.vcard {
+		@include inline-block;
+		margin: 0 0 1.25rem 0;
+		border: 1px solid #ddd;
+		padding: 0.625rem 0.75rem;
+	}
+	.vcard li {
+		margin: 0;
+		display: block;
+	}
+	.vcard .fn {
+		font-weight: bold;
+		font-size: 0.9375rem;
+	}
+
+	.vevent .summary {
+		font-weight: bold;
+	}
+	.vevent abbr {
+		cursor: default;
+		text-decoration: none;
+		font-weight: bold;
+		border: none;
+		padding: 0 0.0625rem;
+	}

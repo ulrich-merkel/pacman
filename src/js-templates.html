@@ -1,0 +1,67 @@
+
+	<script type="text/html" id="template-layout-header">
+		<%= showHeadline() %>
+	</script>
+
+	<script type="text/html" id="template-layout-intro">
+		<i class="icomoon icon-pacman pacman-logo"/>
+		<button class="tooltip button xlarge button-game-pacman" href="#pacman" role="button" title="Play Pacman">
+			<i class="icomoon icon-play"></i><span class="button-label">Play Pacman Game</span>
+		</button>
+	</script>
+
+	<script type="text/html" id="template-layout-pacman">
+		<figure class="row center">
+			<div class="game" id="game"></div>
+			<div class="score" id="score">
+				<div class="score-points">
+					<i class="icomoon icon-star"></i><span class="score-value"></span>
+				</div>
+				<div class="score-lives">
+					<i class="icomoon icon-smiley"></i><span class="score-value"></span>
+				</div>
+				<div class="score-level">
+					<i class="icomoon icon-stack"></i><span class="score-value"></span>
+				</div>
+			</div>
+			<nav class="fullscreen" id="fullscreen">
+				<button class="tooltip" role="button" title="Exit Fullscreen Mode"><i class="icomoon icon-contract"></i></button>
+			</nav>
+		</figure>
+	</script>
+
+	<script type="text/html" id="template-layout-highscore">
+		<article class="row center list-highscore" id="list-highscore"></article>
+		<nav class="row center">
+			<button class="tooltip button xlarge button-game-pacman" href="#pacman" role="button" title="Play Pacman">
+				<i class="icomoon icon-play"></i><span class="button-label">Play Pacman Game</span>
+			</button>
+		</nav>
+	</script>
+	
+	<script type="text/template" id="template-layout-highscore-item">
+		<% if (typeof(counter) != "undefined") { %><span class="highscore-item-counter"><%= counter %></span><% } %>
+		<span class="highscore-item-name"><%= name %></span>
+		<% if (typeof(points) != "undefined" && parseInt(points, 10) !== 0) { %><span class="highscore-item-points"><%= points %></span><% } %>
+	</script>
+
+	<script type="text/html" id="template-layout-footer">
+		<ul role="menu">
+			<li class="columns four">
+				<a class="tooltip button full-width secondary button-game-intro" href="#intro" role="button" title="Show Startpage">
+					<i class="icomoon icon-home"></i><span class="button-label">Startpage</span>
+				</a>
+			</li>
+			<li class="columns four">
+				<a class="tooltip button full-width secondary button-game-pacman" href="#pacman" role="button" title="Play Pacman">
+					<i class="icomoon icon-play"></i><span class="button-label">Play Game</span>
+				</a>
+			</li>
+			<li class="columns four">
+				<a class="tooltip button full-width secondary button-game-highscore" href="#highscore" role="button" title="Show Highscore">
+					<i class="icomoon icon-star"></i><span class="button-label">Highscore</span>
+				</a>
+			</li>
+		</ul>
+	</script>
+	

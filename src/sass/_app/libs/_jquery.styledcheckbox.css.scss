@@ -1,0 +1,72 @@
+/* -------------------------------------------------- 
+	::  Custom Forms Checkbox Replacement
+---------------------------------------------------*/
+
+	.styledCheckbox-wrapper {
+		position: relative;
+		width: 20px;
+		height: 22px;
+		margin-right: 10px;
+		float: left;
+		
+		font-family: 'icomoon';
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		padding-right: 10px;
+
+		/* Better Font Rendering =========== */
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	.styledCheckbox-wrapper input[type=checkbox] {
+		display: none;
+	}
+	.styledCheckbox {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 20px;
+		height: 22px;
+	}
+	.styledCheckbox:before {
+		content: "\e618";
+	}
+	.styledCheckbox.checked {
+		
+	}
+	.styledCheckbox.checked:before {
+		
+		content: "\e617";
+	}
+
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (   min--moz-device-pixel-ratio: 2),
+	only screen and (     -o-min-device-pixel-ratio: 2/1),
+	only screen and (        min-device-pixel-ratio: 2),
+	only screen and (                min-resolution: 192dpi),
+	only screen and (                min-resolution: 2dppx) {
+		/*.styledCheckbox {
+			background-image: url('../img/bg/sprite@2x.png');
+			background-size: 250px 250px;
+		}*/
+	}
+
+	.js .styledCheckbox-wrapper,
+	.js .styledCheckbox {
+		cursor: pointer;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+	}
+	
+	

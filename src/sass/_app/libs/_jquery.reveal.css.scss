@@ -1,0 +1,54 @@
+/* -------------------------------------------------- 
+	:: Reveal Modal Dialogs
+---------------------------------------------------*/
+
+	.reveal-modal-bg { 
+		position: fixed; 
+		z-index: 100;
+		display: none;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+
+		background: rgba(0, 0, 0, .4);
+
+		.no-rgba & {
+			background: url('../assets/img/bg/000000-40.png') repeat 0 0 transparent;
+		}
+	}
+	
+	.reveal-modal {
+		visibility: hidden;
+		top: 160px; 
+		left: 50%;
+		margin-left: -300px;
+		width: 520px;
+		position: absolute;
+		z-index: 101;
+		background: url('../assets/img/bg/modal-gloss.png') no-repeat -200px -80px #333;
+		padding: 20px;
+
+		//@include box-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+		-moz-box-shadow: 0 0 20px rgba(0,0,0,.4);
+		-webkit-box-shadow: 0 0 20px rgba(0,0,0,.4);
+		box-shadow: 0 0 20px rgba(0,0,0,.4);
+	}
+
+	.close-reveal-modal {
+		font-size: 22px;
+		line-height: .5;
+		position: absolute;
+		top: 8px;
+		right: 11px;
+		color: #aaa;
+		text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+		font-weight: bold;
+		cursor: pointer;
+	}
+
+	.reveal-modal.small 		{ width: 200px; margin-left: -140px;}
+	.reveal-modal.medium 		{ width: 400px; margin-left: -240px;}
+	.reveal-modal.large 		{ width: 600px; margin-left: -340px;}
+	.reveal-modal.xlarge 		{ width: 800px; margin-left: -440px;}
+

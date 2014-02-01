@@ -1,0 +1,24 @@
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# Custom files and folders #
+############################
+
+_bkp
+node_modules
+docs
+doc
+*/.sass-cache/*
+.sass-cache
+src/assists/jsdoc/
+src/assists/jsdoc-toolkit/
+todo.txt

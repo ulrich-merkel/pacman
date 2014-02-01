@@ -1,0 +1,33 @@
+//= require "_app/helpers/client"
+//= require "_app/helpers/utils"
+
+//= require "_app/plugins/jquery/jquery.pubsub"
+//= require "_app/plugins/jquery/jquery.reveal"
+//= require "_app/plugins/jquery/jquery.fullscreen"
+//= require "_app/plugins/jquery/jquery.styledcheckbox.0.1.2"
+//= require "_app/plugins/jquery/jquery.tooltip.0.4.7"
+
+//= require "_app/pacman/pacman"
+//= require "_app/pacman/pacman.tools.js"
+//= require "_app/pacman/pacman.player"
+//= require "_app/pacman/pacman.enemy"
+//= require "_app/pacman/pacman.enemy.ai"
+//= require "_app/pacman/pacman.config"
+//= require "_app/pacman/pacman.field"
+//= require "_app/pacman/pacman.keyhandler"
+//= require "_app/pacman/pacman.svg"
+//= require "_app/pacman/pacman.stats"
+//= require "_app/pacman/pacman.video"
+//= require "_app/pacman/pacman.audio"
+
+//= require "_app/marionette"
+//= require "_app/marionette/models"
+//= require "_app/marionette/collections"
+//= require "_app/marionette/views"
+//= require "_app/marionette/layouts"
+//= require "_app/marionette/store"
+//= require "_app/marionette/router"
+//= require "_app/marionette/controller"
+
+
+//= require "_app/bootstrap"

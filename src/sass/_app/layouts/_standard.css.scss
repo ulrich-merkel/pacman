@@ -1,0 +1,246 @@
+/* --------------------------------------------------
+	:: Standard Layout
+	-------------------------------------------------- */
+
+	/**
+	 * css3 keyframe animations
+	 *
+	 */
+
+	@-webkit-keyframes color {
+		0% { color: #fff; }
+		33% { color: #ff0; }
+		66% {color: #f00; }
+		100% { color: #fff; }
+	}
+	@-moz-keyframes color {
+		0% { color: #fff; }
+		33% { color: #ff0; }
+		66% {color: #f00; }
+		100% { color: #fff; }
+	}
+	@-o-keyframes color {
+		0% { color: #fff; }
+		33% { color: #ff0; }
+		66% {color: #f00; }
+		100% { color: #fff; }
+	}
+	@keyframes color {
+		0% { color: #fff; }
+		33% { color: #ff0; }
+		66% {color: #f00; }
+		100% { color: #fff; }
+	}
+
+	@-webkit-keyframes button-playing {
+		0% { background-color: #e7e7e7; }
+		50% { background-color: #f00;}
+		100% { background-color: #e7e7e7; }
+	}
+	@-moz-keyframes button-playing {
+		0% { background-color: #e7e7e7; }
+		50% { background-color: #f00;}
+		100% { background-color: #e7e7e7; }
+	}
+	@-o-keyframes button-playing {
+		0% { background-color: #e7e7e7; }
+		50% { background-color: #f00;}
+		100% { background-color: #e7e7e7; }
+	}
+	@keyframes button-playing {
+		0%   { background-color: #e7e7e7; }
+		50% { background-color: #f00;}
+		100% { background-color: #e7e7e7; }
+	}
+
+	
+	body, html {
+		background: $background-body;
+	}
+
+	#content {
+		overflow: hidden;
+		.layer {
+			display: none;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			//background: url('../assets/img/bg/ajax-loader.gif') no-repeat center center #000;
+		}
+		&.loading {
+			.layer {
+				display: block;
+			}
+		}
+	}
+
+	.region-header {
+		h1 {
+			-webkit-animation: color 15s infinite; /* Safari 4+ */
+			-moz-animation:    color 15s infinite; /* Fx 5+ */
+			-ms-animation:     color 15s infinite; /* Ie 10+ */
+			-o-animation:      color 15s infinite; /* Opera 12+ */
+			animation:         color 15s infinite; /* IE 10+ */
+		}
+	}
+
+	.region-main {
+
+		article p, #list-highscore ul {
+			margin: 0 40px 40px;
+		}
+		.pacman-logo {
+			@include font-size(300);
+			color: #ff0;
+			display: block;
+			margin: 0 auto 40px;
+			-webkit-animation: color 6s infinite; /* Safari 4+ */
+			-moz-animation:    color 6s infinite; /* Fx 5+ */
+			-ms-animation:     color 6s infinite; /* Ie 10+ */
+			-o-animation:      color 6s infinite; /* Opera 12+ */
+			animation:         color 6s infinite; /* IE 10+ */
+		}
+
+		.game {
+			position: relative;
+			/*width: 100%;*/
+			/*overflow: hidden;*/
+		}
+
+		.score {
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 5px;
+			text-align: left;
+			background: rgba(0, 0, 0, 0.5);
+		}
+		.fullscreen {
+			display: none;
+			position: absolute;
+			top: 0;
+			right: 0;
+			padding: 5px;
+			text-align: right;
+			background: rgba(0, 0, 0, 0.5);
+			.icomoon {
+				font-size: 30px;
+				color: #fff;
+				width: 100px;
+				height: 100px;
+			}
+		}
+
+		.highscore-item-counter,
+		.highscore-item-name,
+		.highscore-item-points {
+			@include inline-block;
+			text-align: left;
+		}
+		.highscore-item-counter {
+			min-width: 90px;
+			text-align: center;
+		}
+		.highscore-item-name {
+			min-width: 200px;
+		}
+		.highscore-item-points {
+			min-width: 90px;
+		}
+
+		fieldset {
+			max-width: 400px;
+			margin: 0 auto 40px;
+		}
+		fieldset .row {
+			margin-bottom: 15px;
+		}
+	}
+	.region-footer {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: rgba(255, 255, 255, 0.25);
+
+		.button {
+			width: 100%;
+			margin-bottom: 0;
+		}
+		.row {
+			margin-bottom: 0;
+		}
+	}
+
+
+	.button {
+
+		&.button-game-start {
+			display: block;
+			margin: 0 auto 20px;
+			@include font-size(40);
+			
+		}
+		
+		&.playing {
+			-webkit-animation: button-playing 1s infinite; /* Safari 4+ */
+			-moz-animation:    button-playing 1s infinite; /* Fx 5+ */
+			-ms-animation:     button-playing 1s infinite; /* Ie 10+ */
+			-o-animation:      button-playing 1s infinite; /* Opera 12+ */
+			animation:         button-playing 1s infinite; /* IE 10+ */
+		}
+		
+	}
+
+	.video-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: auto;
+		z-index: 1000;
+		overflow: hidden;
+		background: #000;
+
+		video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: auto;
+			cursor: pointer;
+		}
+
+	}
+	
+	.audio-wrapper {
+		display: none;
+		height: 0;
+		width: 0;
+
+		audio {
+		
+		}
+
+	}
+
+	.reveal-modal {
+		.row {
+			margin-bottom: 10px;
+			.styledCheckbox {
+				@include font-size(25);
+			}
+		}
+		.button {
+			width: 100%;
+		}
+		label {
+			color: #fff;
+		}
+	}
+	

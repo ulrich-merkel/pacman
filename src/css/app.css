@@ -1,0 +1,1604 @@
+/* -------------------------------------------------- 
+	:: Scss Config Vars
+---------------------------------------------------*/
+/**
+ * backgrounds and colors
+ */
+/**
+ * media query breakpoints
+ */
+/* default extends / often used combinations
+====================================================================== */
+/* line 6, ../sass/_app/partials/_general.scss */
+.ir {
+  overflow: hidden;
+  border: 0;
+  background-color: transparent;
+}
+/* line 11, ../sass/_app/partials/_general.scss */
+.ir:before {
+  display: block;
+  width: 0;
+  height: 150%;
+  content: "";
+}
+
+/* line 21, ../sass/_app/partials/_general.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* line 27, ../sass/_app/partials/_general.scss */
+.visuallyhidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+/* line 38, ../sass/_app/partials/_general.scss */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
+/* line 49, ../sass/_app/partials/_general.scss */
+.clearfix:before,
+.cf:before,
+.clearfix:after,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+/* line 54, ../sass/_app/partials/_general.scss */
+.clearfix:after,
+.cf:after {
+  clear: both;
+}
+
+/* helpers for dimensions and positions
+====================================================================== */
+/*%tiled {
+  margin: 0 $margin-default $margin-default 0;
+  float: left;
+}*/
+/* --------------------------------------------------
+	:: Display mixins
+---------------------------------------------------*/
+/* --------------------------------------------------
+	:: Typographic mixins
+---------------------------------------------------*/
+/* Requires inline-block or block for proper styling */
+/*
+ * @font-face mixin
+ * @include font-face('family', '../fonts/', 'myfontname');
+ */
+/* --------------------------------------------------
+	:: Css3 mixins
+---------------------------------------------------*/
+/*
+ * Used to normalise select dropdowns
+ * Styles from formalize.me
+ * @include normaliseSelect();
+ */
+/* mixins and other helpers
+====================================================================== */
+/* -------------------------------------------------- 
+	:: Icons
+---------------------------------------------------*/
+/* icon defaults */
+/* line 6, ../sass/_app/components/_icons.css.scss */
+.icon {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: top;
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  padding: 0;
+  background: url("../assets/img/bg/sprite.png") no-repeat 0 0 transparent;
+}
+
+/* retina icons */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* line 26, ../sass/_app/components/_icons.css.scss */
+  .icon {
+    background-image: url("../assets/img/bg/sprite@2x.png");
+    background-size: 250px 250px;
+  }
+}
+/* line 33, ../sass/_app/components/_icons.css.scss */
+.icon.icon-list, .icon.icon-arrow-right, .icon.icon-arrow-left {
+  width: 10px;
+  height: 7px;
+}
+/* line 37, ../sass/_app/components/_icons.css.scss */
+.icon.icon-list, .icon.icon-arrow-right {
+  background-position: 0 0;
+}
+/* line 40, ../sass/_app/components/_icons.css.scss */
+.icon.icon-arrow-left {
+  background-position: -15px 0;
+}
+/* line 43, ../sass/_app/components/_icons.css.scss */
+.icon.icon-arrow-top {
+  background-position: -30px 0;
+}
+/* line 46, ../sass/_app/components/_icons.css.scss */
+.icon.icon-arrow-down {
+  background-position: -45px 0;
+}
+/* line 50, ../sass/_app/components/_icons.css.scss */
+.icon.icon-plus, .icon.icon-minus {
+  width: 10px;
+  height: 10px;
+}
+/* line 54, ../sass/_app/components/_icons.css.scss */
+.icon.icon-plus {
+  background-position: -60px 0;
+}
+/* line 56, ../sass/_app/components/_icons.css.scss */
+.icon.icon-plus.icon-color-white {
+  background-position: -90px 0;
+}
+/* line 60, ../sass/_app/components/_icons.css.scss */
+.icon.icon-minus {
+  background-position: -75px 0;
+}
+/* line 62, ../sass/_app/components/_icons.css.scss */
+.icon.icon-minus.icon-color-white {
+  background-position: -105px 0;
+}
+/* line 67, ../sass/_app/components/_icons.css.scss */
+.icon.icon-logo {
+  width: 120px;
+  height: 30px;
+  background-position: 0 -15px;
+}
+/* line 73, ../sass/_app/components/_icons.css.scss */
+.icon.icon-navmobile {
+  width: 30px;
+  height: 30px;
+  background-position: 0 -50px;
+}
+/* line 77, ../sass/_app/components/_icons.css.scss */
+.active .icon.icon-navmobile {
+  background-position: -45px -50px;
+}
+
+/*@font-face {
+	font-family: 'icomoon';
+	src:url('../assets/fonts/icomoon.eot');
+	src:url('../assets/fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/icomoon.ttf') format('truetype'),
+		url('../assets/fonts/icomoon.woff') format('woff'),
+		url('../assets/fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}*/
+/* line 13, ../sass/_app/components/_icomoon.css.scss */
+[class^="icon-"].icomoon, [class*=" icon-"].icomoon {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  padding-right: 10px;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 30, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-home:before {
+  content: "\e600";
+}
+/* line 33, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-support:before {
+  content: "\e601";
+}
+/* line 36, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-clock:before {
+  content: "\e602";
+}
+/* line 39, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-user:before {
+  content: "\e603";
+}
+/* line 42, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-contract:before {
+  content: "\e604";
+}
+/* line 45, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-expand:before {
+  content: "\e605";
+}
+/* line 48, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-cog:before {
+  content: "\e606";
+}
+/* line 51, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-star:before {
+  content: "\e607";
+}
+/* line 54, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-smiley:before {
+  content: "\e608";
+}
+/* line 57, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-tongue:before {
+  content: "\e609";
+}
+/* line 60, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-close:before {
+  content: "\e60a";
+}
+/* line 63, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-checkmark:before {
+  content: "\e60b";
+}
+/* line 66, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-play:before {
+  content: "\e60c";
+}
+/* line 69, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-pause:before {
+  content: "\e60d";
+}
+/* line 72, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-volume-high:before {
+  content: "\e60e";
+}
+/* line 75, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-volume-medium:before {
+  content: "\e60f";
+}
+/* line 78, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-volume-low:before {
+  content: "\e610";
+}
+/* line 81, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-volume-mute:before {
+  content: "\e611";
+}
+/* line 84, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-pacman:before {
+  content: "\e612";
+}
+/* line 87, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-stack:before {
+  content: "\e613";
+}
+/* line 90, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-paint-format:before {
+  content: "\e614";
+}
+/* line 93, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-minus:before {
+  content: "\e615";
+}
+/* line 96, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-plus:before {
+  content: "\e616";
+}
+/* line 99, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-checkbox-checked:before {
+  content: "\e617";
+}
+/* line 102, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-checkbox-unchecked:before {
+  content: "\e618";
+}
+/* line 105, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-google-plus:before {
+  content: "\e619";
+}
+/* line 108, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-facebook:before {
+  content: "\e61a";
+}
+/* line 111, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-twitter:before {
+  content: "\e61b";
+}
+/* line 114, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-vimeo2:before {
+  content: "\e61c";
+}
+/* line 117, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-lanyrd:before {
+  content: "\e61d";
+}
+/* line 120, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-picassa:before {
+  content: "\e61e";
+}
+/* line 123, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-flickr:before {
+  content: "\e61f";
+}
+/* line 126, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-dribbble:before {
+  content: "\e620";
+}
+/* line 129, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-forrst:before {
+  content: "\e621";
+}
+/* line 132, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-deviantart:before {
+  content: "\e622";
+}
+/* line 135, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-tumblr:before {
+  content: "\e623";
+}
+/* line 138, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-github:before {
+  content: "\e624";
+}
+/* line 141, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-pinterest:before {
+  content: "\e625";
+}
+/* line 144, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-xing:before {
+  content: "\e626";
+}
+/* line 147, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-linkedin:before {
+  content: "\e627";
+}
+/* line 150, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-reddit:before {
+  content: "\e628";
+}
+/* line 153, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-delicious:before {
+  content: "\e629";
+}
+/* line 156, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-html5:before {
+  content: "\e62a";
+}
+/* line 159, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-chrome:before {
+  content: "\e62b";
+}
+/* line 162, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-firefox:before {
+  content: "\e62c";
+}
+/* line 165, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-IE:before {
+  content: "\e62d";
+}
+/* line 168, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-opera:before {
+  content: "\e62e";
+}
+/* line 171, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-safari:before {
+  content: "\e62f";
+}
+/* line 174, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-IcoMoon:before {
+  content: "\e630";
+}
+/* line 177, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-lastfm:before {
+  content: "\e631";
+}
+/* line 180, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-stumbleupon:before {
+  content: "\e632";
+}
+/* line 183, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-stackoverflow:before {
+  content: "\e633";
+}
+/* line 186, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-flattr:before {
+  content: "\e634";
+}
+/* line 189, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-soundcloud:before {
+  content: "\e635";
+}
+/* line 192, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-windows8:before {
+  content: "\e636";
+}
+/* line 195, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-android:before {
+  content: "\e637";
+}
+/* line 198, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-apple:before {
+  content: "\e638";
+}
+/* line 201, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-github2:before {
+  content: "\e639";
+}
+/* line 204, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-blogger:before {
+  content: "\e63a";
+}
+/* line 207, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-flickr2:before {
+  content: "\e63b";
+}
+/* line 210, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-feed:before {
+  content: "\e63c";
+}
+/* line 213, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-mail:before {
+  content: "\e63d";
+}
+/* line 216, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-smiley:before {
+  content: "\e63e";
+}
+/* line 219, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-tongue:before {
+  content: "\e63f";
+}
+/* line 222, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-sad:before {
+  content: "\e640";
+}
+/* line 225, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-sad2:before {
+  content: "\e641";
+}
+/* line 228, ../sass/_app/components/_icomoon.css.scss */
+.icomoon.icon-pencil:before {
+  content: "\e642";
+}
+
+/* --------------------------------------------------
+	:: Grid
+	-------------------------------------------------- */
+/* basic containers */
+/* line 6, ../sass/_app/components/_grid.css.scss */
+.container {
+  padding: 0;
+}
+
+/* line 8, ../sass/_app/components/_grid.css.scss */
+.column, .columns, .section {
+  margin-left: 2%;
+  float: left;
+  min-height: 1px;
+  position: relative;
+}
+
+/* line 9, ../sass/_app/components/_grid.css.scss */
+.column:first-child, .columns:first-child, .section {
+  margin-left: 0;
+}
+
+/* line 11, ../sass/_app/components/_grid.css.scss */
+.row {
+  width: 100%;
+  /*max-width: 1200px;*/
+  min-width: 300px;
+  margin: 0;
+  vertical-align: top;
+}
+/* line 18, ../sass/_app/components/_grid.css.scss */
+.row .row {
+  min-width: 0;
+}
+/* line 22, ../sass/_app/components/_grid.css.scss */
+.row .one {
+  width: 6.5%;
+}
+/* line 23, ../sass/_app/components/_grid.css.scss */
+.row .two {
+  width: 15%;
+}
+/* line 24, ../sass/_app/components/_grid.css.scss */
+.row .three {
+  width: 23.5%;
+}
+/* line 25, ../sass/_app/components/_grid.css.scss */
+.row .four {
+  width: 32%;
+}
+/* line 26, ../sass/_app/components/_grid.css.scss */
+.row .five {
+  width: 40.5%;
+}
+/* line 27, ../sass/_app/components/_grid.css.scss */
+.row .six {
+  width: 49%;
+}
+/* line 28, ../sass/_app/components/_grid.css.scss */
+.row .seven {
+  width: 57.5%;
+}
+/* line 29, ../sass/_app/components/_grid.css.scss */
+.row .eight {
+  width: 66%;
+}
+/* line 30, ../sass/_app/components/_grid.css.scss */
+.row .nine {
+  width: 74.5%;
+}
+/* line 31, ../sass/_app/components/_grid.css.scss */
+.row .ten {
+  width: 83%;
+}
+/* line 32, ../sass/_app/components/_grid.css.scss */
+.row .eleven {
+  width: 91.5%;
+}
+/* line 33, ../sass/_app/components/_grid.css.scss */
+.row .twelve {
+  width: 100%;
+}
+/* line 35, ../sass/_app/components/_grid.css.scss */
+.row .offset-by-three {
+  margin-left: 25.5%;
+}
+/* line 38, ../sass/_app/components/_grid.css.scss */
+.row.center {
+  text-align: center;
+}
+
+/* line 44, ../sass/_app/components/_grid.css.scss */
+img, object, embed {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 48, ../sass/_app/components/_grid.css.scss */
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* Nicolas Gallagher's micro clearfix */
+/* line 53, ../sass/_app/components/_grid.css.scss */
+.row:before, .row:after, .clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+
+/* line 54, ../sass/_app/components/_grid.css.scss */
+.row:after, .clearfix:after {
+  clear: both;
+}
+
+/* line 55, ../sass/_app/components/_grid.css.scss */
+.row, .clearfix {
+  zoom: 1;
+}
+
+/* responsive design */
+@media only screen and (max-width: 1200px) {
+  /* line 59, ../sass/_app/components/_grid.css.scss */
+  .container {
+    padding: 0;
+  }
+}
+	/*@media only screen and (max-width: $breakpoint-landscape) {
+		.container { padding: 0 20px; }
+		.column, .columns { margin-left: 1.46%; }
+		.row {
+            .one 		{ width: 6.9%; }
+            .two 		{ width: 15.26%; }
+            .three  	{ width: 23.9%; }
+            .four 		{ width: 32.36%; }
+            .five 		{ width: 40.8%; }
+            .six 		{ width: 49.27%; }
+            .seven 	    { width: 57.72%; }
+            .eight 	    { width: 66.18%; }
+            .nine 		{ width: 74.63%; }
+            .ten 		{ width: 83.09%; }
+            .eleven 	{ width: 91.54%; }
+            .twelve 	{ width: 100%; }
+        }
+	}*/
+@media only screen and (max-width: 767px) {
+  /* line 80, ../sass/_app/components/_grid.css.scss */
+  body {
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* line 81, ../sass/_app/components/_grid.css.scss */
+  .container {
+    min-width: 0;
+    padding: 0;
+  }
+
+  /* line 82, ../sass/_app/components/_grid.css.scss */
+  .row {
+    width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 83, ../sass/_app/components/_grid.css.scss */
+  .row .row .column, .row .row .columns {
+    padding: 0;
+  }
+
+  /* line 84, ../sass/_app/components/_grid.css.scss */
+  .column, .columns {
+    width: auto !important;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 85, ../sass/_app/components/_grid.css.scss */
+  .column:last-child, .columns:last-child {
+    margin-right: 0;
+    float: none;
+  }
+
+  /* line 86, ../sass/_app/components/_grid.css.scss */
+  [class*="column"] + [class*="column"]:last-child {
+    float: none;
+  }
+
+  /* line 87, ../sass/_app/components/_grid.css.scss */
+  [class*="column"]:before, [class*="column"]:after {
+    content: "";
+    display: table;
+  }
+
+  /* line 88, ../sass/_app/components/_grid.css.scss */
+  [class*="column"]:after {
+    clear: both;
+  }
+
+  /* line 90, ../sass/_app/components/_grid.css.scss */
+  .offset-by-three {
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Mobile 4-column Grid */
+  /* line 95, ../sass/_app/components/_grid.css.scss */
+  .row .phone-one, .row .phone-two, .row .phone-three, .row .phone-four {
+    margin-left: 4.4%;
+    float: left;
+    min-height: 1px;
+    position: relative;
+    padding: 0;
+  }
+
+  /* line 96, ../sass/_app/components/_grid.css.scss */
+  .row .phone-one:first-child, .row .phone-two:first-child, .row .phone-three:first-child, .row .phone-four:first-child {
+    margin-left: 0;
+  }
+
+  /* line 97, ../sass/_app/components/_grid.css.scss */
+  .row .phone-one:last-child, .row .phone-two:last-child, .row .phone-three:last-child, .row .phone-four:last-child {
+    float: left;
+  }
+
+  /* line 99, ../sass/_app/components/_grid.css.scss */
+  .row .phone-one {
+    width: 21.68% !important;
+  }
+
+  /* line 100, ../sass/_app/components/_grid.css.scss */
+  .row .phone-two {
+    width: 47.8% !important;
+  }
+
+  /* line 101, ../sass/_app/components/_grid.css.scss */
+  .row .phone-three {
+    width: 73.9% !important;
+  }
+
+  /* line 102, ../sass/_app/components/_grid.css.scss */
+  .row .phone-four {
+    width: 100% !important;
+  }
+}
+@media only screen and (max-width: 650px) {
+  /* line 106, ../sass/_app/components/_grid.css.scss */
+  .row.mobile-grid .phone-one, .row.mobile-grid .phone-two, .row.mobile-grid .phone-three, .row.mobile-grid .phone-four {
+    width: 100% !important;
+    display: block;
+    float: none;
+    clear: both;
+    margin-left: 0;
+  }
+}
+/* -------------------------------------------------- 
+	:: Navigation
+---------------------------------------------------*/
+/* -------------------------------------------------- 
+	:: Loading Layer
+---------------------------------------------------*/
+/* Standard Forms */
+/* line 6, ../sass/_app/components/_forms.css.scss */
+form {
+  margin: 0 0 1rem;
+}
+
+/* Using forms within rows, we need to set some defaults */
+/*form .row .row {
+	margin: 0 -0.5rem;
+}
+form .row .row .column,
+form .row .row .columns {
+	padding: 0 0.5rem;
+}
+form .row input.column,
+form .row input.columns,
+form .row textarea.column,
+form .row textarea.columns {
+	padding-left: 0.5rem;
+}*/
+/* Label Styles */
+/* line 26, ../sass/_app/components/_forms.css.scss */
+label {
+  /*font-size: 0.875rem;*/
+  color: #4d4d4d;
+  cursor: pointer;
+  display: block;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+  /* Styles for required inputs */
+}
+
+/* line 34, ../sass/_app/components/_forms.css.scss */
+label.right {
+  float: none;
+  text-align: right;
+}
+
+/* line 38, ../sass/_app/components/_forms.css.scss */
+label.inline {
+  margin: 0 0 1rem 0;
+  padding: 0.625rem 0;
+}
+
+/* line 42, ../sass/_app/components/_forms.css.scss */
+label small {
+  text-transform: capitalize;
+  color: #666666;
+}
+
+/* line 47, ../sass/_app/components/_forms.css.scss */
+select {
+  -webkit-appearance: none !important;
+  /*background: #fafafa url("data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iM3B4IiB2aWV3Qm94PSIwIDAgNiAzIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2IDMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIHBvaW50cz0iNS45OTIsMCAyLjk5MiwzIC0wLjAwOCwwICIvPjwvc3ZnPg==") no-repeat;
+  background-position-x: 97%;
+  background-position-y: center;*/
+  background: #e7e7e7;
+  border: 1px solid #dadada;
+  color: #333;
+  padding: 0.5rem;
+  /*font-size: 0.875rem;*/
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 60, ../sass/_app/components/_forms.css.scss */
+select.radius {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 64, ../sass/_app/components/_forms.css.scss */
+select:hover {
+  background: #f2f2f2 url("data:image/svg+xml;base64, PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iM3B4IiB2aWV3Qm94PSIwIDAgNiAzIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2IDMiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIHBvaW50cz0iNS45OTIsMCAyLjk5MiwzIC0wLjAwOCwwICIvPjwvc3ZnPg==") no-repeat;
+  background-position-x: 97%;
+  background-position-y: center;
+  border-color: #999999;
+}
+
+/* We use this to get basic styling on all basic form elements */
+/* line 85, ../sass/_app/components/_forms.css.scss */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 0 1rem 0;
+  padding: 0.5rem;
+  width: 100%;
+  font-family: inherit;
+  color: rgba(0, 0, 0, 0.75);
+  background-color: white;
+  border: 3px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-appearance: none;
+  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+/* line 105, ../sass/_app/components/_forms.css.scss */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+textarea:focus {
+  -webkit-box-shadow: 0 0 5px #e810f0;
+  -moz-box-shadow: 0 0 5px #e810f0;
+  box-shadow: 0 0 5px #e810f0;
+  background: #fafafa;
+  border-color: #e810f0;
+  color: #e810f0;
+  outline: none;
+}
+/* line 116, ../sass/_app/components/_forms.css.scss */
+input[type="text"][disabled],
+input[type="password"][disabled],
+input[type="date"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="month"][disabled],
+input[type="week"][disabled],
+input[type="email"][disabled],
+input[type="number"][disabled],
+input[type="search"][disabled],
+input[type="tel"][disabled],
+input[type="time"][disabled],
+input[type="url"][disabled],
+textarea[disabled] {
+  background-color: #ddd;
+}
+
+/* Adjust margin for form elements below */
+/* line 125, ../sass/_app/components/_forms.css.scss */
+input[type="file"],
+input[type="checkbox"],
+input[type="radio"],
+select {
+  margin: 0 0 1rem 0;
+}
+
+/* line 130, ../sass/_app/components/_forms.css.scss */
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  *zoom: 1;
+  vertical-align: top;
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+  margin-bottom: 0;
+  vertical-align: baseline;
+}
+
+/* Normalize file input width */
+/* line 139, ../sass/_app/components/_forms.css.scss */
+input[type="file"] {
+  width: 100%;
+}
+
+/* We add basic fieldset styling */
+/* line 144, ../sass/_app/components/_forms.css.scss */
+fieldset {
+  color: #fff;
+  border: solid 1px #4d4d4d;
+  padding: 1.25rem;
+  margin: 1.125rem 0;
+}
+
+/* line 150, ../sass/_app/components/_forms.css.scss */
+fieldset legend {
+  font-weight: 700;
+  background: #4d4d4d;
+  padding: 10px;
+  /*padding: 0.1875rem;*/
+  /*margin: 0;
+  margin-left: -0.1875rem;*/
+}
+
+/* line 158, ../sass/_app/components/_forms.css.scss */
+fieldset i {
+  float: left;
+}
+
+/* line 161, ../sass/_app/components/_forms.css.scss */
+fieldset label {
+  float: left;
+  color: #fff;
+}
+
+/* --------------------------------------------------
+	:: Standard Layout
+	-------------------------------------------------- */
+/**
+ * css3 keyframe animations
+ *
+ */
+@-webkit-keyframes color {
+  /* line 11, ../sass/_app/layouts/_standard.css.scss */
+  0% {
+    color: #fff;
+  }
+
+  /* line 12, ../sass/_app/layouts/_standard.css.scss */
+  33% {
+    color: #ff0;
+  }
+
+  /* line 13, ../sass/_app/layouts/_standard.css.scss */
+  66% {
+    color: #f00;
+  }
+
+  /* line 14, ../sass/_app/layouts/_standard.css.scss */
+  100% {
+    color: #fff;
+  }
+}
+
+@-moz-keyframes color {
+  /* line 17, ../sass/_app/layouts/_standard.css.scss */
+  0% {
+    color: #fff;
+  }
+
+  /* line 18, ../sass/_app/layouts/_standard.css.scss */
+  33% {
+    color: #ff0;
+  }
+
+  /* line 19, ../sass/_app/layouts/_standard.css.scss */
+  66% {
+    color: #f00;
+  }
+
+  /* line 20, ../sass/_app/layouts/_standard.css.scss */
+  100% {
+    color: #fff;
+  }
+}
+
+@-o-keyframes color {
+  /* line 23, ../sass/_app/layouts/_standard.css.scss */
+  0% {
+    color: #fff;
+  }
+
+  /* line 24, ../sass/_app/layouts/_standard.css.scss */
+  33% {
+    color: #ff0;
+  }
+
+  /* line 25, ../sass/_app/layouts/_standard.css.scss */
+  66% {
+    color: #f00;
+  }
+
+  /* line 26, ../sass/_app/layouts/_standard.css.scss */
+  100% {
+    color: #fff;
+  }
+}
+
+@keyframes color {
+  /* line 29, ../sass/_app/layouts/_standard.css.scss */
+  0% {
+    color: #fff;
+  }
+
+  /* line 30, ../sass/_app/layouts/_standard.css.scss */
+  33% {
+    color: #ff0;
+  }
+
+  /* line 31, ../sass/_app/layouts/_standard.css.scss */
+  66% {
+    color: #f00;
+  }
+
+  /* line 32, ../sass/_app/layouts/_standard.css.scss */
+  100% {
+    color: #fff;
+  }
+}
+
+@-webkit-keyframes button-playing {
+  /* line 36, ../sass/_app/layouts/_standard.css.scss */
+  0% {
+    background-color: #e7e7e7;
+  }
+
+  /* line 37, ../sass/_app/layouts/_standard.css.scss */
+  50% {
+    background-color: #f00;
+  }
+
+  /* line 38, ../sass/_app/layouts/_standard.css.scss */
+  100% {
+    background-color: #e7e7e7;
+  }
+}
+
+@-moz-keyframes button-playing {
+  /* line 41, ../sass/_app/layouts/_standard.css.scss */
+  0% {
+    background-color: #e7e7e7;
+  }
+
+  /* line 42, ../sass/_app/layouts/_standard.css.scss */
+  50% {
+    background-color: #f00;
+  }
+
+  /* line 43, ../sass/_app/layouts/_standard.css.scss */
+  100% {
+    background-color: #e7e7e7;
+  }
+}
+
+@-o-keyframes button-playing {
+  /* line 46, ../sass/_app/layouts/_standard.css.scss */
+  0% {
+    background-color: #e7e7e7;
+  }
+
+  /* line 47, ../sass/_app/layouts/_standard.css.scss */
+  50% {
+    background-color: #f00;
+  }
+
+  /* line 48, ../sass/_app/layouts/_standard.css.scss */
+  100% {
+    background-color: #e7e7e7;
+  }
+}
+
+@keyframes button-playing {
+  /* line 51, ../sass/_app/layouts/_standard.css.scss */
+  0% {
+    background-color: #e7e7e7;
+  }
+
+  /* line 52, ../sass/_app/layouts/_standard.css.scss */
+  50% {
+    background-color: #f00;
+  }
+
+  /* line 53, ../sass/_app/layouts/_standard.css.scss */
+  100% {
+    background-color: #e7e7e7;
+  }
+}
+
+/* line 57, ../sass/_app/layouts/_standard.css.scss */
+body, html {
+  background: black;
+}
+
+/* line 61, ../sass/_app/layouts/_standard.css.scss */
+#content {
+  overflow: hidden;
+}
+/* line 63, ../sass/_app/layouts/_standard.css.scss */
+#content .layer {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+/* line 73, ../sass/_app/layouts/_standard.css.scss */
+#content.loading .layer {
+  display: block;
+}
+
+/* line 80, ../sass/_app/layouts/_standard.css.scss */
+.region-header h1 {
+  -webkit-animation: color 15s infinite;
+  /* Safari 4+ */
+  -moz-animation: color 15s infinite;
+  /* Fx 5+ */
+  -ms-animation: color 15s infinite;
+  /* Ie 10+ */
+  -o-animation: color 15s infinite;
+  /* Opera 12+ */
+  animation: color 15s infinite;
+  /* IE 10+ */
+}
+
+/* line 91, ../sass/_app/layouts/_standard.css.scss */
+.region-main article p, .region-main #list-highscore ul {
+  margin: 0 40px 40px;
+}
+/* line 94, ../sass/_app/layouts/_standard.css.scss */
+.region-main .pacman-logo {
+  font-size: 300px;
+  font-size: 30rem;
+  color: #ff0;
+  display: block;
+  margin: 0 auto 40px;
+  -webkit-animation: color 6s infinite;
+  /* Safari 4+ */
+  -moz-animation: color 6s infinite;
+  /* Fx 5+ */
+  -ms-animation: color 6s infinite;
+  /* Ie 10+ */
+  -o-animation: color 6s infinite;
+  /* Opera 12+ */
+  animation: color 6s infinite;
+  /* IE 10+ */
+}
+/* line 106, ../sass/_app/layouts/_standard.css.scss */
+.region-main .game {
+  position: relative;
+  /*width: 100%;*/
+  /*overflow: hidden;*/
+}
+/* line 112, ../sass/_app/layouts/_standard.css.scss */
+.region-main .score {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.5);
+}
+/* line 120, ../sass/_app/layouts/_standard.css.scss */
+.region-main .fullscreen {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  text-align: right;
+  background: rgba(0, 0, 0, 0.5);
+}
+/* line 128, ../sass/_app/layouts/_standard.css.scss */
+.region-main .fullscreen .icomoon {
+  font-size: 30px;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+}
+/* line 138, ../sass/_app/layouts/_standard.css.scss */
+.region-main .highscore-item-counter,
+.region-main .highscore-item-name,
+.region-main .highscore-item-points {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  *zoom: 1;
+  vertical-align: top;
+  text-align: left;
+}
+/* line 142, ../sass/_app/layouts/_standard.css.scss */
+.region-main .highscore-item-counter {
+  min-width: 90px;
+  text-align: center;
+}
+/* line 146, ../sass/_app/layouts/_standard.css.scss */
+.region-main .highscore-item-name {
+  min-width: 200px;
+}
+/* line 149, ../sass/_app/layouts/_standard.css.scss */
+.region-main .highscore-item-points {
+  min-width: 90px;
+}
+/* line 153, ../sass/_app/layouts/_standard.css.scss */
+.region-main fieldset {
+  max-width: 400px;
+  margin: 0 auto 40px;
+}
+/* line 157, ../sass/_app/layouts/_standard.css.scss */
+.region-main fieldset .row {
+  margin-bottom: 15px;
+}
+
+/* line 161, ../sass/_app/layouts/_standard.css.scss */
+.region-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.25);
+}
+/* line 168, ../sass/_app/layouts/_standard.css.scss */
+.region-footer .button {
+  width: 100%;
+  margin-bottom: 0;
+}
+/* line 172, ../sass/_app/layouts/_standard.css.scss */
+.region-footer .row {
+  margin-bottom: 0;
+}
+
+/* line 180, ../sass/_app/layouts/_standard.css.scss */
+.button.button-game-start {
+  display: block;
+  margin: 0 auto 20px;
+  font-size: 40px;
+  font-size: 4rem;
+}
+/* line 187, ../sass/_app/layouts/_standard.css.scss */
+.button.playing {
+  -webkit-animation: button-playing 1s infinite;
+  /* Safari 4+ */
+  -moz-animation: button-playing 1s infinite;
+  /* Fx 5+ */
+  -ms-animation: button-playing 1s infinite;
+  /* Ie 10+ */
+  -o-animation: button-playing 1s infinite;
+  /* Opera 12+ */
+  animation: button-playing 1s infinite;
+  /* IE 10+ */
+}
+
+/* line 197, ../sass/_app/layouts/_standard.css.scss */
+.video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1000;
+  overflow: hidden;
+  background: #000;
+}
+/* line 209, ../sass/_app/layouts/_standard.css.scss */
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+/* line 221, ../sass/_app/layouts/_standard.css.scss */
+.audio-wrapper {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+/* line 233, ../sass/_app/layouts/_standard.css.scss */
+.reveal-modal .row {
+  margin-bottom: 10px;
+}
+/* line 235, ../sass/_app/layouts/_standard.css.scss */
+.reveal-modal .row .styledCheckbox {
+  font-size: 25px;
+  font-size: 2.5rem;
+}
+/* line 239, ../sass/_app/layouts/_standard.css.scss */
+.reveal-modal .button {
+  width: 100%;
+}
+/* line 242, ../sass/_app/layouts/_standard.css.scss */
+.reveal-modal label {
+  color: #fff;
+}
+
+/*@import "../libs/jquery.reveal.css.scss";*/
+/* -------------------------------------------------- 
+	::  Custom Forms Checkbox Replacement
+---------------------------------------------------*/
+/* line 5, ../sass/_app/libs/_jquery.styledcheckbox.css.scss */
+.styledCheckbox-wrapper {
+  position: relative;
+  width: 20px;
+  height: 22px;
+  margin-right: 10px;
+  float: left;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  padding-right: 10px;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 25, ../sass/_app/libs/_jquery.styledcheckbox.css.scss */
+.styledCheckbox-wrapper input[type=checkbox] {
+  display: none;
+}
+
+/* line 28, ../sass/_app/libs/_jquery.styledcheckbox.css.scss */
+.styledCheckbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 20px;
+  height: 22px;
+}
+
+/* line 36, ../sass/_app/libs/_jquery.styledcheckbox.css.scss */
+.styledCheckbox:before {
+  content: "\e618";
+}
+
+/* line 42, ../sass/_app/libs/_jquery.styledcheckbox.css.scss */
+.styledCheckbox.checked:before {
+  content: "\e617";
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /*.styledCheckbox {
+  	background-image: url('../img/bg/sprite@2x.png');
+  	background-size: 250px 250px;
+  }*/
+}
+/* line 61, ../sass/_app/libs/_jquery.styledcheckbox.css.scss */
+.js .styledCheckbox-wrapper,
+.js .styledCheckbox {
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* -------------------------------------------------- 
+	::  Custom Forms Select Replacement
+---------------------------------------------------*/
+/* line 5, ../sass/_app/libs/_jquery.styledselect.css.scss */
+.styled-select-wrapper {
+  position: relative;
+  color: #999;
+  cursor: pointer;
+  font-family: Arial;
+  width: 50px;
+}
+
+/* hide original select as much as possible */
+/* line 14, ../sass/_app/libs/_jquery.styledselect.css.scss */
+.styled-select-wrapper select {
+  width: 1px !important;
+  height: 1px !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  float: left;
+  background: transparent;
+  -webkit-appearance: none;
+}
+
+/* line 24, ../sass/_app/libs/_jquery.styledselect.css.scss */
+.styled-select-wrapper select:focus {
+  outline: none;
+}
+
+/* line 27, ../sass/_app/libs/_jquery.styledselect.css.scss */
+.lt-ie9 .styled-select-wrapper select {
+  display: none;
+}
+
+/* replacement header */
+/* line 32, ../sass/_app/libs/_jquery.styledselect.css.scss */
+.styled-select-header {
+  position: relative;
+  width: 100%;
+  background: #f1f1f1;
+  border-bottom: 1px solid #ccc;
+}
+/* line 38, ../sass/_app/libs/_jquery.styledselect.css.scss */
+.styled-select-header .styled-select-header-entry {
+  display: block;
+  padding: 6px 0 6px 10px;
+  color: #999;
+}
+/* line 43, ../sass/_app/libs/_jquery.styledselect.css.scss */
+.styled-select-header .styled-select-header-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 25px;
+  height: 26px;
+  border-right: 1px solid #ccc;
+}
+/* line 53, ../sass/_app/libs/_jquery.styledselect.css.scss */
+.styled-select-header .styled-select-header-icon:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #b4b4b4;
+  display: block;
+  position: absolute;
+  right: 8px;
+  bottom: 11px;
+}
+/* line 65, ../sass/_app/libs/_jquery.styledselect.css.scss */
+.styled-select-header.open .styled-select-header-icon:after {
+  border-bottom: 4px solid #b4b4b4;
+  border-top: none;
+}
+
+/* replacement content */
+/* line 72, ../sass/_app/libs/_jquery.styledselect.css.scss */
+.styled-select-content {
+  position: absolute;
+  z-index: 1000;
+  padding: 0;
+  top: 30px;
+  left: 0px;
+  max-height: 300px;
+  overflow-y: auto;
+  border-top: 1px solid #bbb;
+  border-right: 1px solid #bbb;
+  border-left: 1px solid #bbb;
+}
+/* line 84, ../sass/_app/libs/_jquery.styledselect.css.scss */
+.styled-select-content .styled-select-entry {
+  display: block;
+  float: none;
+  padding: 5px 10px;
+  background: white;
+  border-bottom: 1px solid #bbb;
+  opacity: 0.95;
+}
+/* line 92, ../sass/_app/libs/_jquery.styledselect.css.scss */
+.styled-select-content .styled-select-entry.selected {
+  color: #d52b1e;
+}
+
+/* -------------------------------------------------- 
+	:: Plugin Tooltip
+---------------------------------------------------*/
+/* line 6, ../sass/_app/libs/_jquery.tooltip.css.scss */
+#tooltip {
+  position: absolute;
+  z-index: 8050;
+  display: block;
+  max-width: 200px;
+  padding: 3px 8px;
+  visibility: visible;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #000;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* -------------------------------------------------- 
+	:: Print Styles
+---------------------------------------------------*/
+/* line 4, ../sass/_app/base/_print.css.scss */
+.show-on-print {
+  display: none !important;
+}
+
+@media print {
+  /* Setup */
+  /* line 7, ../sass/_app/base/_print.css.scss */
+  * {
+    /* Black prints faster: sanbeiji.com/archives/953 */
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  /* line 14, ../sass/_app/base/_print.css.scss */
+  p a, p a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+
+  /*p a[href]:after { content: " (" attr(href) ")"; }*/
+  /* line 16, ../sass/_app/base/_print.css.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /* line 17, ../sass/_app/base/_print.css.scss */
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+
+  /* Don't show links for images, or javascript/internal links */
+  /* line 18, ../sass/_app/base/_print.css.scss */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 19, ../sass/_app/base/_print.css.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* css-discuss.incutio.com/wiki/Printing_Tables */
+  /* line 20, ../sass/_app/base/_print.css.scss */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 22, ../sass/_app/base/_print.css.scss */
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 23, ../sass/_app/base/_print.css.scss */
+  h2, h3 {
+    page-break-after: avoid;
+  }
+
+  /* line 24, ../sass/_app/base/_print.css.scss */
+  .hide-on-print {
+    display: none !important;
+  }
+
+  /* line 25, ../sass/_app/base/_print.css.scss */
+  .show-on-print {
+    display: block !important;
+  }
+
+  /* Page */
+}

@@ -1,0 +1,220 @@
+<!doctype html>
+<!--[if IE 7 ]><html class="ie7 no-js lt-ie9 lt-ie8" dir="ltr" lang="de"><![endif]-->
+<!--[if IE 8 ]><html class="ie8 no-js lt-ie9" dir="ltr" lang="de"><![endif]-->
+<!--[if IE 9 ]><html class="ie9 no-js" dir="ltr" lang="de"><![endif]-->
+<!--[if IEMobile ]><html class="iem no-js" dir="ltr" lang="de"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" dir="ltr" lang="de" manifest="cache.manifest"><!--<![endif]-->
+
+<head>
+
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="application-name" content="">
+
+    <!-- seo -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="robots" content="index, follow, archive">
+
+    <link rel="stylesheet" href="css/base.css" type="text/css" media="all">
+
+    <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- no js fixes -->
+    <noscript>
+        <style>
+            <!--
+            #layer-no-js {
+				display: block;
+			}
+            -->
+        </style>
+    </noscript>
+
+</head>
+
+<body class="no-select">
+
+	<!-- game container begin -->
+	<section class="container loading" id="content">
+		<header class="region-header" id="region-header" role="banner"></header>
+		<section class="region-main" id="region-main" role="main"></section>
+		<footer class="region-footer" id="region-footer" role="contentinfo"></footer>
+		<!--<div class="layer" id="layer-content" role="presentation"></div>-->
+	</section>
+	<!-- game container end -->
+
+
+	<!-- loading layer begin -->
+	<div class="layer" id="layer-loading" role="presentation">
+		<h4 class="layer-text">
+			<span class="layer-headline">Pacman</span>
+			<span class="layer-subline">Loading Game</span>
+		</h4>
+		<div class="layer-loading-progress">
+			<span id="layer-loading-bar" class="bar"></span>
+		</div>
+		<div class="layer-background"></div>
+	</div>
+	<!-- loading layer end -->
+
+    <!-- no-js layer begin -->
+	<div class="layer" id="layer-no-js" role="presentation">
+		<h4 class="layer-text">
+			<span class="layer-headline">JavaScript is deactivated!</span>
+			<span class="layer-subline">This game requires enabled javascript in your browser!</span>
+		</h4>
+		<div class="layer-background"></div>
+	</div>
+	<!-- no-js layer end -->
+
+	<!-- loading layer begin -->
+	<div class="layer" id="layer-no-supported" role="presentation">
+		<h4 class="layer-text">
+			<span class="layer-headline">Browser not supported</span>
+			<span class="layer-subline">
+				This game requires google's chrome browser or safari!<br /><br />
+				<a class="external" href="http://www.google.de/intl/de/chrome/browser/" target="_blank">Download chrome</a><br />
+				<a class="external" href="http://www.apple.com/de/safari/" target="_blank">Download safari</a>
+			</span>
+		</h4>
+		<div class="layer-background"></div>
+	</div>
+	<!-- loading layer end -->
+
+	<!-- reveal game exit begin -->
+    <div id="reveal-game-exit" class="reveal-modal" role="presentation">
+		<div class="container">
+			<div class="row">
+				<h2 class="columns twelve">Do you really want to quit?</h2>
+			</div>
+			<div class="row">
+				<div class="columns six">
+					<button class="tooltip button xlarge secondary button-reveal-game-exit-no" title="Play Game" role="button"><i class="icomoon icon-close"></i>No</button>
+				</div>
+				<div class="columns six">
+					<button class="tooltip button xlarge button-reveal-game-exit-yes" title="Exit Game" role="button"><i class="icomoon icon-checkmark"></i>Yes</button>
+				</div>
+			</div>
+		</div>
+    </div>
+	<!-- reveal game exit end -->
+
+	<!-- reveal game exit fullscreen begin -->
+    <div id="reveal-game-exit-fullscreen" class="reveal-modal" role="presentation">
+		<div class="container">
+			<div class="row">
+				<h2 class="columns twelve">Do you really want to quite fullscreen mode? This will exit the game!</h2>
+			</div>
+			<div class="row">
+				<div class="columns six">
+					<button class="tooltip button xlarge secondary button-reveal-game-exit-fullscreen-no" title="Play Game" role="button"><i class="icomoon icon-close"></i>No</button>
+				</div>
+				<div class="columns six">
+					<button class="tooltip button xlarge button-reveal-game-exit-fullscreen-yes" title="Exit Game" role="button"><i class="icomoon icon-checkmark"></i>Yes</button>
+				</div>
+			</div>
+		</div>
+    </div>
+	<!-- reveal game exit fullscreen end -->
+
+	<!-- reveal game enter name begin -->
+    <div id="reveal-game-enter-name" class="reveal-modal" role="presentation">
+		<form action="#pacman" class="container" id="form-enter-name" method="post">
+			<div class="row">
+				<h2 class="columns twelve">Please enter your name:</h2>
+			</div>
+			<div class="row">
+				<div class="columns twelve">
+					<input class="" id="form-enter-name-value" name="form-enter-name-value" type="text" placeholder="Player 1" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="columns six">
+					<button class="tooltip button large secondary button-reveal-game-enter-name-no" title="Don't Play Game" role="button"><i class="icomoon icon-close"></i>Close</button>
+				</div>
+				<div class="columns six">
+					<button class="tooltip button large button-reveal-game-enter-name-yes" title="Start Game" role="button"><i class="icomoon icon-checkmark"></i>Start Game</button>
+				</div>
+			</div>
+		</form>
+    </div>
+	<!-- reveal game enter name end -->
+
+	<div id="js-templates" role="presentation">
+		
+	</div>
+
+	<!-- include script async -->
+	<script src="js/cache.min.js"></script>
+	<script>
+		/* <![CDATA[ */
+		(function (window, document, app, undefined) {
+			'use strict';
+
+			// module vars
+			var utils = app.helpers.utils,                                  // @type {object} Shortcut for utils functions
+				on = utils.on;                                              // @type {function} Shortcut for utilsl.on helper		
+		
+			/**
+			 * load additional resources on window load
+			 *
+			 */
+			on(window, 'load', function () {
+		
+				// init base vars and loaded callback
+				var baseUrl = window.baseurl || utils.url(window.location.pathname).folder,
+					loadingBar = document.getElementById('layer-loading-bar'),
+					loaded = 0,
+					loadedCallback = function () {
+						loaded = loaded + 1;
+						if (loaded === 2) {
+							if (loadingBar) {
+								loadingBar.style.width = '100%';
+							}
+							if (window.jQuery) {
+								$('#layer-loading').fadeOut(300);
+							} else {
+								document.getElementById('layer-loading').style.display = 'none';
+							}
+						}
+					};
+		
+		
+				// load application cache
+				app.cache.load('applicationCache', function () {
+					loadedCallback();
+				}, {
+					progress: function (data) {
+						if (loadingBar) {
+							loadingBar.style.width = data + '%';
+						}
+					}
+				});
+		
+				// load dynamic css and js
+				app.cache.load([
+					{url: baseUrl + "css/app.css", type: "css", lifetime: 0},
+					{url: baseUrl + "js-templates.html", type: "html", node: {id: "js-templates"}},
+					{url: baseUrl + "js/lib.js", type: "js", group: 1, lifetime: 0},
+					{url: baseUrl + "js/app.js", type: "js", group: 2, lifetime: 0}
+				], function () {
+					loadedCallback();
+				});
+		
+			});
+		
+		}(window, document, window.app || {}));
+		/* ]]> */
+	</script>
+
+</body>
+
+</html>

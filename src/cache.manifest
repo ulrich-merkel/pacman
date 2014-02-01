@@ -1,0 +1,77 @@
+CACHE MANIFEST
+
+# Our cached resources
+# version 004
+
+CACHE:
+# html files
+./index.html
+./js-templates.html
+
+# js files
+./js/cache.min.js
+./js/lib.js
+./js/app.js
+
+# css files
+./css/base.css
+./css/app.css
+
+# images
+#./favicon.ico
+./assets/img/bg/ajax-loader.gif
+./assets/img/bg/modal-gloss.png
+
+# fonts
+./assets/fonts/icomoon.eot
+./assets/fonts/icomoon.svg
+./assets/fonts/icomoon.ttf
+./assets/fonts/icomoon.woff
+
+./assets/fonts/PLUMP-webfont.eot
+./assets/fonts/PLUMP-webfont.svg
+./assets/fonts/PLUMP-webfont.ttf
+./assets/fonts/PLUMP-webfont.woff
+
+# audio
+./assets/audio/death.mp3
+./assets/audio/death.ogg
+./assets/audio/death.wav
+
+./assets/audio/eat-ghost.mp3
+./assets/audio/eat-ghost.ogg
+./assets/audio/eat-ghost.wav
+
+./assets/audio/pellet.mp3
+./assets/audio/pellet.ogg
+./assets/audio/pellet.wav
+
+./assets/audio/power-pellet.mp3
+./assets/audio/power-pellet.ogg
+./assets/audio/power-pellet.wav
+
+./assets/audio/start.mp3
+./assets/audio/start.ogg
+./assets/audio/start.wav
+
+# video
+./assets/video/death.png
+./assets/video/death.mp4
+./assets/video/death.ogv
+./assets/video/death.webm
+
+./assets/video/nextlevel.png
+./assets/video/nextlevel.mp4
+./assets/video/nextlevel.ogv
+./assets/video/nextlevel.webm
+
+./assets/video/end.png
+./assets/video/end.mp4
+./assets/video/end.ogv
+./assets/video/end.webm
+
+NETWORK:
+*
+
+
+FALLBACK:
